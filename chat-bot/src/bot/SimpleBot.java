@@ -12,6 +12,8 @@ public class SimpleBot {
         guessAge();
         count();
         test();
+        madLib();
+        dayOfTheWeek();
         end();
     }
 
@@ -26,6 +28,7 @@ public class SimpleBot {
         System.out.println("What a great name you have, " + name + "!");
     }
 
+    // write some silly logic based off of musical choice
     static void guessAge() {
         System.out.println("Let me guess your age.");
         System.out.println("Give me the remainders of your age divided by by 3, 5 and 7.");
@@ -57,6 +60,44 @@ public class SimpleBot {
             System.out.println("Please, try again.");
             guess = scanner.nextInt();
         }
+    }
+
+    static void madLib() {
+        System.out.println("placeholder");
+    }
+
+    static void dayOfTheWeek() {
+        System.out.println("Enter a number between 1 and 7 corresponding to a day of the week. For example, Monday would be equal to 1.");
+        int day = scanner.nextInt();
+        String dayString;
+
+        // switch statement with int data type
+        switch (day) {
+            case 1:
+                dayString = "Monday";
+                break;
+            case 2:
+                dayString = "Tuesday";
+                break;
+            case 3:
+                dayString = "Wednesday";
+                break;
+            case 4:
+                dayString = "Thursday";
+                break;
+            case 5:
+                dayString = "Friday";
+                break;
+            case 6:
+                dayString = "Saturday";
+                break;
+            case 7:
+                dayString = "Sunday";
+                break;
+            default:
+                dayString = "Invalid day";
+        }
+        System.out.println(dayString);
     }
 
     static void end() {
